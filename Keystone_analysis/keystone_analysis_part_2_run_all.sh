@@ -28,9 +28,9 @@ python keystone_analysis_part_2_random_cluster.py > Logs/keystone_analysis_part_
 
 echo 'Running network analysis'
 
-python keystone_analysis_full_nw_analysis.py > Logs/keystone_analysis_full_nw_analysis.log 2> Logs/keystone_analysis_full_nw_analysis.err &
-python keystone_analysis_comparison_nw_analysis.py > Logs/keystone_analysis_comparison_nw_analysis.log 2> Logs/keystone_analysis_comparison_nw_analysis.err &
-python keystone_analysis_dropout_nw_analysis.py > Logs/keystone_analysis_dropout_nw_analysis.log 2> Logs/keystone_analysis_dropout_nw_analysis.err &
+python keystone_analysis_part_2_full_nw_analysis.py > Logs/keystone_analysis_full_nw_analysis.log 2> Logs/keystone_analysis_full_nw_analysis.err &
+python keystone_analysis_part_2_comparison_nw_analysis.py > Logs/keystone_analysis_comparison_nw_analysis.log 2> Logs/keystone_analysis_comparison_nw_analysis.err &
+python keystone_analysis_part_2_dropout_nw_analysis.py > Logs/keystone_analysis_dropout_nw_analysis.log 2> Logs/keystone_analysis_dropout_nw_analysis.err &
 
 wait
 
