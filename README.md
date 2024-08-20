@@ -2,6 +2,11 @@
 This repository conains all important files and scripts mentioned and used in my master thesis
 The python scripts were run with the python version 3.11. The R-Scripts were run with the R-version 4.3.1.
 ## Diversity analysis
+Diversity analysis is performed on the constructed OTU tables. 
+There are scripts availabe for:
+- alpha-diversity
+- top 10 OTU calculation
+- beta-diversity
 
 ## *Albugo* and *Dioszegia* interactions
 
