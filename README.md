@@ -1,6 +1,8 @@
 # MasterThesis
-This repository conains all important files and scripts mentioned and used in my master thesis
+This repository conains all important files and scripts mentioned and used in my master thesis.
+
 The python scripts were run with the python version 3.11. The R-Scripts were run with the R-version 4.3.1.
+
 ## Diversity analysis
 Diversity analysis is performed on the constructed OTU tables. 
 There are scripts availabe for:
@@ -18,5 +20,6 @@ The scripts for the keystone analysis contain the following workflow:
 
 ## Genome assembly of *A. laibachii* Nc14
 Most of the scripts in this process are from the *"Beginners tutorial for genome assembly"* by Kim and Kim (2022)
+
 Link: https://star-protocols.cell.com/protocols/1799#fig2
 
