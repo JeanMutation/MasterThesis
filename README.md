@@ -17,6 +17,8 @@ Here, the process can be performed in the following order:
 3. Create filtered networks from Fastspar data using the after processing script
 4. evtl. create gephi visualization (dataframes for gephi are provided)
 
+In addition, hub analysis was performed on the networks (Script: hub_analysis.R)
+
 ## Keystone analysis
 
 The scripts for the keystone analysis contain the following workflow:
