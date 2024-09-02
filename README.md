@@ -11,6 +11,11 @@ There are scripts availabe for:
 - beta-diversity
 
 ## *Albugo* and *Dioszegia* interactions
+Here, the process can be performed in the following order:
+1. Create input files (with the wanted filtering parameter and fitted to the format of Fastspar)
+2. Run Fastspar (with the provided bash scripts)
+3. Create filtered networks from Fastspar data using the after processing script
+4. evtl. create gephi visualization (dataframes for gephi are provided)
 
 ## Keystone analysis
 
