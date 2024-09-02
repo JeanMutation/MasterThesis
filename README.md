@@ -30,3 +30,9 @@ Most of the scripts in this process are from the *"Beginners tutorial for genome
 
 Link: https://star-protocols.cell.com/protocols/1799#fig2
 
+The scripts for the genome assembly contain the following workflow:
+![image](https://github.com/user-attachments/assets/f06df118-d818-4f56-89d9-9648bea8c92f)
+
+The raw reads, the assembly, the repeat masking, the genome annotation and the functional annotation are provided.
+
+
