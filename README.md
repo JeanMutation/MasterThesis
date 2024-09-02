@@ -17,6 +17,8 @@ Here, the process can be performed in the following order:
 3. Create filtered networks from Fastspar data using the after processing script
 4. evtl. create gephi visualization (dataframes for gephi are provided)
 
+In addition, hub analysis was performed on the networks (Script: hub_analysis.R)
+
 ## Keystone analysis
 
 The scripts for the keystone analysis contain the following workflow:
@@ -27,4 +29,10 @@ The scripts for the keystone analysis contain the following workflow:
 Most of the scripts in this process are from the *"Beginners tutorial for genome assembly"* by Kim and Kim (2022)
 
 Link: https://star-protocols.cell.com/protocols/1799#fig2
+
+The scripts for the genome assembly contain the following workflow:
+![image](https://github.com/user-attachments/assets/f06df118-d818-4f56-89d9-9648bea8c92f)
+
+The raw reads, the assembly, the repeat masking, the genome annotation and the functional annotation are provided.
+
 
