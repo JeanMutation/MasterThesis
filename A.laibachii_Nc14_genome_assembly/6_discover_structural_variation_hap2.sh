@@ -14,7 +14,7 @@ echo "Job ID: $PBS_JOBID"
 echo "User: $USER"
 echo "Start time: $(date)"
 
-out_dir="structural_variation_hap1"
+out_dir="structural_variation_hap2"
 mkdir -p $out_dir
 
 # Make the scaffolds
@@ -23,7 +23,7 @@ conda activate svim
 echo "Running svim..."
 
 #Conduct read-based SV calling using SVIM
-svim reads --cores 10 --aligner minimap2 $out_dir raw_seqs/raw_reads_mapped_and_filtered_albugo.fasta hifiasm_assembly/Nc14_asm.bp.hap1.p_ctg.fa
+svim reads --cores 10 --aligner minimap2 $out_dir raw_seqs/raw_reads_mapped_and_filtered_albugo.fasta hifiasm_assembly/Nc14_asm.bp.hap2.p_ctg.fa
 
 conda deactivate
 echo "SVIM deactivated"
@@ -32,7 +32,7 @@ source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate minimap2
 echo "Running minimap2..."
 
-minimap2 -a -x asm5 --cs -r2k -t 10 ref/Nc14_A.laibachii.dna.toplevel.fa hifiasm_assembly/Nc14_asm.bp.hap1.p_ctg.fa | samtools sort -m4G -@ 10 -O BAM -o $out_dir/minimap_assembly_to_ref.bam
+minimap2 -a -x asm5 --cs -r2k -t 10 ref/Nc14_A.laibachii.dna.toplevel.fa hifiasm_assembly/Nc14_asm.bp.hap2.p_ctg.fa | samtools sort -m4G -@ 10 -O BAM -o $out_dir/minimap_assembly_to_ref.bam
 samtools index $out_dir/minimap_assembly_to_ref.bam
 
 conda deactivate

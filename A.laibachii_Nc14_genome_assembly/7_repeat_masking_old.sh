@@ -14,11 +14,11 @@ echo "Job ID: $PBS_JOBID"
 echo "User: $USER"
 echo "Start time: $(date)"
 
-out_dir='repeatmodeler'
+out_dir='repeatmodeler_2'
 
 mkdir -p $out_dir
 
-sample="hifiasm_assembly/Nc14_asm.bp.hap2.p_ctg.fa"
+sample="ref/Nc14_A.laibachii.dna.toplevel.fa"
 
 source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate repeatmodeler
@@ -30,7 +30,7 @@ BuildDatabase -name $out_dir/Hifi $sample
 
 RepeatModeler -database $out_dir/Hifi -threads 10 -LTRStruct -ninja_dir /home/tu/tu_tu/tu_zxoyf37/bin/NINJA-0.95-cluster_only/NINJA
 
-RepeatMasker -lib $out_dir/Hifi-families.fa -s -parallel 10 -xsmall -alignments $out_dir/Nc14_asm.bp.hap2.p_ctg.fa.masked -dir $out_dir
+RepeatMasker -lib $out_dir/Hifi-families.fa -s -parallel 10 -xsmall -alignments $out_dir/Nc14_A.laibachii.dna.toplevel.fa.masked -dir $out_dir
 
 conda deactivate
 echo "repeatmodeler deactivated"

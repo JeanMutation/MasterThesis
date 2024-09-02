@@ -1,4 +1,4 @@
-headers_Arabidopsis.txt#PBS -l nodes=1:ppn=10
+#PBS -l nodes=1:ppn=10
 #PBS -l walltime=01:00:00
 #PBS -l mem=40gb
 #PBS -S /bin/bash
@@ -16,13 +16,13 @@ echo "Start time: $(date)"
 
 mkdir -p mapping_before_assembly
 
-# Convert the fastq file into fasta file
+#Convert the fastq file into fasta file
 source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate seqtk
 seqtk seq -a raw_seqs/CA445-001P0001.ccs.fastq.gz > raw_seqs/raw_reads_complete.fasta
 conda deactivate
 
-# Run minimap2
+Run minimap2
 source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate minimap2
 
@@ -42,12 +42,12 @@ cat mapping_before_assembly/headers_Nc14.txt mapping_before_assembly/headers_Nc2
 
 sort mapping_before_assembly/headers_Arabidopsis.txt -o mapping_before_assembly/headers_Arabidopsis_sorted.txt
 
-# Find the intersection between unique_headers_Albugo.txt and headers_Arabidopsis.txt
+#Find the intersection between unique_headers_Albugo.txt and headers_Arabidopsis.txt
 comm -12 mapping_before_assembly/unique_headers_Albugo.txt mapping_before_assembly/headers_Arabidopsis_sorted.txt > mapping_before_assembly/intersection_headers.txt
 
 source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate python_bio
 
-python filter_fasta.py
+python 1_filter_fasta.py
 
 conda deactivate

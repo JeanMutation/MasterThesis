@@ -23,7 +23,7 @@ source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
 conda activate bioawk
 echo "Running bioawk"
 
-bioawk -c fastx '{print "PacBio_HiFi," length($seq)}' raw_seqs/raw_reads_mapped_and_filtered.fasta >> read_length_dist/length.csv
+bioawk -c fastx '{print "PacBio_HiFi," length($seq)}' raw_seqs/raw_reads_mapped_and_filtered_albugo.fasta >> read_length_dist/length.csv
 
 conda deactivate
 

@@ -41,8 +41,8 @@ LEN2=`bioawk -c fastx '{sum+=length($seq)}END{print sum}' $REF2` # Size of assem
 cat $REF2 | bioawk -c fastx -v line="$STRAIN2" '{print line","length($seq)","length($seq)}' | \
 sort -k3rV -t "," | awk -F "," -v len="$LEN2" -v type="$TYPE2" 'OFS=","{ print $1,$2,type,(sum+0)/len; sum+=$3 }' >> quality_assesment_assembly/length.csv
 
-STRAIN3=Canu_Nc14
-REF3=canu_assembly/Nc14_asm.contigs.fasta
+STRAIN3=Old_assembly
+REF3=ref/Nc14_A.laibachii.dna.toplevel.fa
 TYPE3=contig
 
 LEN3=`bioawk -c fastx '{sum+=length($seq)}END{print sum}' $REF3` # Size of assembled genome
