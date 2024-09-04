@@ -20,7 +20,7 @@ mkdir -p $out_dir
 
 sample="hifiasm_assembly/Nc14_asm.bp.hap2.p_ctg.fa"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate repeatmodeler
 echo "Running repeatmodeler..."
 
