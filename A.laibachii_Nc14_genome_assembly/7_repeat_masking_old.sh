@@ -20,7 +20,7 @@ mkdir -p $out_dir
 
 sample="ref/Nc14_A.laibachii.dna.toplevel.fa"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate repeatmodeler
 echo "Running repeatmodeler..."
 
