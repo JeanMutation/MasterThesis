@@ -7,7 +7,7 @@ base_content = """
 
 cd $PBS_O_WORKDIR
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate qiime2-env
 
 mv data_structure/RunRUN_NR/rawdata/Undetermined_S0_L001_I1_001.fastq.gz data_structure/RunRUN_NR/rawdata/barcodes.fastq.gz 
