@@ -16,7 +16,7 @@ base_content_further_process = """
 
 cd $PBS_O_WORKDIR
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate qiime2-env
 
 qiime vsearch cluster-features-de-novo \
