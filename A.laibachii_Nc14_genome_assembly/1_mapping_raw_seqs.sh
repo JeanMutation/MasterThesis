@@ -17,7 +17,7 @@ echo "Start time: $(date)"
 mkdir -p mapping_before_assembly
 
 #Convert the fastq file into fasta file
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate seqtk
 seqtk seq -a raw_seqs/CA445-001P0001.ccs.fastq.gz > raw_seqs/raw_reads_complete.fasta
 conda deactivate
@@ -45,7 +45,7 @@ sort mapping_before_assembly/headers_Arabidopsis.txt -o mapping_before_assembly/
 #Find the intersection between unique_headers_Albugo.txt and headers_Arabidopsis.txt
 comm -12 mapping_before_assembly/unique_headers_Albugo.txt mapping_before_assembly/headers_Arabidopsis_sorted.txt > mapping_before_assembly/intersection_headers.txt
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate python_bio
 
 python 1_filter_fasta.py
