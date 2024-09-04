@@ -15,7 +15,7 @@ echo "User: $USER"
 echo "Start time: $(date)"
 
 # Load conda environment
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate python
 echo "Conda environment activated"
 
@@ -39,7 +39,7 @@ echo 'All Python scripts have completed'
 conda deactivate
 
 cd $PBS_O_WORKDIR
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate R-env
 
 echo 'Running R script'
