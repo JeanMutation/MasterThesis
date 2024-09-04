@@ -4,7 +4,7 @@ import shutil
 
 
 
-table = pd.read_csv('input_flashweave_complete/Root_RS_otu_fp16p.tsv', sep='\t')
+table = pd.read_csv('input_flashweave_complete/dataframe.tsv', sep='\t')
 table.set_index(table.columns[0], inplace=True)
 
 dir_for_run = 'keystone_analysis_run_34_data'
@@ -48,7 +48,7 @@ fastspar_script = '''
 cd $PBS_O_WORKDIR
 
 # Activate Julia
-source /home/tu/tu_tu/tu_zxoyf37/juliaup/etc/profile.d/julia.sh
+source juliaup/etc/profile.d/julia.sh
 
 # Run Julia commands
 julia -e 'using FlashWeave;
