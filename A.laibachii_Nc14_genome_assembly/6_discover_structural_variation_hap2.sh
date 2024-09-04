@@ -18,7 +18,7 @@ out_dir="structural_variation_hap2"
 mkdir -p $out_dir
 
 # Make the scaffolds
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate svim
 echo "Running svim..."
 
@@ -28,7 +28,7 @@ svim reads --cores 10 --aligner minimap2 $out_dir raw_seqs/raw_reads_mapped_and_
 conda deactivate
 echo "SVIM deactivated"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate minimap2
 echo "Running minimap2..."
 
@@ -38,7 +38,7 @@ samtools index $out_dir/minimap_assembly_to_ref.bam
 conda deactivate
 echo "minimap2 deactivated"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate svim
 echo "Running svim..."
 
