@@ -3,6 +3,17 @@ This repository conains all important files and scripts mentioned and used in my
 
 The python scripts were run with the python version 3.11. The R-Scripts were run with the R-version 4.3.1.
 
+## Aplicon data processing
+The amplicon data was processed with QIIME2 in the following steps:
+1. Import and Demultiplexing
+2. DADA2
+3. Combining the sequences
+4. Further processing:
+   4.1 OTU-clustering
+   4.2 Taxonomy assignment
+
+Subsequently, the raw OTU tables were processed (Script: OTU_table_processing/filter_otu_and_tax_final.ipynb)
+
 ## Diversity analysis
 Diversity analysis is performed on the constructed OTU tables. 
 There are scripts availabe for:
