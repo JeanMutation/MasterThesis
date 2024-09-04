@@ -17,7 +17,7 @@ echo "Start time: $(date)"
 mkdir -p quality_assesment_assembly
 mkdir -p Logs
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate bioawk
 echo "Running bioawk..."
 
@@ -53,7 +53,7 @@ sort -k3rV -t "," | awk -F "," -v len="$LEN3" -v type="$TYPE3" 'OFS=","{ print $
 conda deactivate
 echo "Length script is finished"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate busco38
 echo "Running busco..."
 
@@ -91,7 +91,7 @@ paste -d "," quality_assesment_assembly/complete_single.txt quality_assesment_as
 # Delete temporary files
 rm quality_assesment_assembly/complete_single.txt quality_assesment_assembly/complete_duplicated.txt quality_assesment_assembly/fragmented.txt quality_assesment_assembly/missing.txt
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate quast
 echo "Quast environment activated"
 
@@ -102,7 +102,7 @@ quast.py -t 10 -o quality_assesment_assembly/quast_canu -r ref/Nc14_A.laibachii.
 conda deactivate
 echo "QUAST is finished"
 
-source /home/tu/tu_tu/tu_zxoyf37/miniconda3/etc/profile.d/conda.sh
+source miniconda3/etc/profile.d/conda.sh
 conda activate r_env_stats
 echo "R environment is running..."
 
